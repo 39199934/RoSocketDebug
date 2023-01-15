@@ -12,7 +12,8 @@ class ClientViewModel: NSObject,ObservableObject,Identifiable{
     @Published var client: GCDAsyncSocket
     @Published var hostIp: String
     @Published var hostPort: String
-    @Published var stringEncoding: String.Encoding
+    @Published var sendStringEncoding: String.Encoding
+    @Published var reciveStringEncoding: String.Encoding
     @Published var sendMessage: [MessageModel<String>]
     @Published var reciveMessage: [MessageModel<Data>]
     @Published var id: UUID
@@ -23,7 +24,8 @@ class ClientViewModel: NSObject,ObservableObject,Identifiable{
     
     override init(){
         id = UUID()
-        stringEncoding = .utf8
+        sendStringEncoding = .utf8
+        reciveStringEncoding = .utf8
         sendMessage = []
         reciveMessage = []
         sendMessageDraft = []
@@ -79,7 +81,7 @@ extension ClientViewModel{
         let msg = MessageModel(content: message)
         
         sendMessageDraft.append(msg)
-        client.write(message.data(using: stringEncoding), withTimeout: -1, tag: msg.id.TAGINT)
+        client.write(message.data(using: sendStringEncoding), withTimeout: -1, tag: msg.id.TAGINT)
     }
     func onClickedLink(){
         if client.isConnected{

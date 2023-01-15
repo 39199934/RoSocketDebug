@@ -30,7 +30,7 @@ struct MessageModel<T: Hashable>: Identifiable{
 extension MessageModel: MessageModelProtocol{
     
     
-    func getMessageForView(stringEncoding: String.Encoding) -> String {
+    func getMessageForView(stringEncoding stringEncoding: String.Encoding) -> String {
         if (T.self == Data.self){
             return String(data: content as! Data, encoding: stringEncoding) ?? "DATA 转换失败"
             

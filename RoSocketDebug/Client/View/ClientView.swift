@@ -31,23 +31,10 @@ struct ClientView: View {
                     .font(.headline)
                     .foregroundColor(.secondary)
                 TextField("端口", text: $client.hostPort)
-                    
-                Text("字符编码：\(client.stringEncoding.description)")
-                Picker("字符编码", selection: $client.stringEncoding) {
-                    Text("\(String.Encoding.utf8.description)").tag(String.Encoding.utf8)
-                    Text("\(String.Encoding.ascii.description)").tag(String.Encoding.ascii)
-                    Text("\(String.Encoding.utf16.description)").tag(String.Encoding.utf16)
-                    Text("\(String.Encoding.utf32.description)").tag(String.Encoding.utf32)
-                    
-                    Text("\(String.Encoding.windowsCP1250.description)").tag(String.Encoding.windowsCP1250)
-                    Text("\(String.Encoding.windowsCP1251.description)").tag(String.Encoding.windowsCP1251)
-                    Text("\(String.Encoding.windowsCP1252.description)").tag(String.Encoding.windowsCP1252)
-                    Text("\(String.Encoding.windowsCP1253.description)").tag(String.Encoding.windowsCP1253)
-                    Text("\(String.Encoding.windowsCP1254.description)").tag(String.Encoding.windowsCP1254)
-                    
-                }.onChange(of: client.stringEncoding) { newValue in
-                    client.stringEncoding = newValue
-                }
+                Text("接收字符编码：\(client.reciveStringEncoding.description)")
+                Text("发送字符编码：\(client.sendStringEncoding.description)")
+                
+
                 Button(client.isConnected ? "断开连接":"连接"){
                     client.onClickedLink()
                     
@@ -61,10 +48,10 @@ struct ClientView: View {
             }.padding()
             VStack{
                 
-                RecevieMessagesView(reciveMessage: $client.reciveMessage, stringEncoding: $client.stringEncoding)
+                RecevieMessagesView(reciveMessage: $client.reciveMessage, reciveStringEncoding: $client.reciveStringEncoding)
                     
                 Divider()
-                SendMessagesView(sendMessage: $client.sendMessage, stringEncoding: $client.stringEncoding)
+                SendMessagesView(sendMessage: $client.sendMessage, sendStringEncoding: $client.sendStringEncoding)
                 ClientToolBarView(client: client)
                 SendMessageControllerView(client: client, draft: "")
                 
