@@ -31,7 +31,23 @@ struct ClientView: View {
                     .font(.headline)
                     .foregroundColor(.secondary)
                 TextField("端口", text: $client.hostPort)
+                    
                 Text("字符编码：\(client.stringEncoding.description)")
+                Picker("字符编码", selection: $client.stringEncoding) {
+                    Text("\(String.Encoding.utf8.description)").tag(String.Encoding.utf8)
+                    Text("\(String.Encoding.ascii.description)").tag(String.Encoding.ascii)
+                    Text("\(String.Encoding.utf16.description)").tag(String.Encoding.utf16)
+                    Text("\(String.Encoding.utf32.description)").tag(String.Encoding.utf32)
+                    
+                    Text("\(String.Encoding.windowsCP1250.description)").tag(String.Encoding.windowsCP1250)
+                    Text("\(String.Encoding.windowsCP1251.description)").tag(String.Encoding.windowsCP1251)
+                    Text("\(String.Encoding.windowsCP1252.description)").tag(String.Encoding.windowsCP1252)
+                    Text("\(String.Encoding.windowsCP1253.description)").tag(String.Encoding.windowsCP1253)
+                    Text("\(String.Encoding.windowsCP1254.description)").tag(String.Encoding.windowsCP1254)
+                    
+                }.onChange(of: client.stringEncoding) { newValue in
+                    client.stringEncoding = newValue
+                }
                 Button(client.isConnected ? "断开连接":"连接"){
                     client.onClickedLink()
                     
@@ -49,6 +65,7 @@ struct ClientView: View {
                     
                 Divider()
                 SendMessagesView(sendMessage: $client.sendMessage, stringEncoding: $client.stringEncoding)
+                ClientToolBarView(client: client)
                 SendMessageControllerView(client: client, draft: "")
                 
             }.padding()

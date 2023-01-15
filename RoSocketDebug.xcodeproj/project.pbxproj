@@ -23,6 +23,10 @@
 		FDB1CEB12973CD1B0073EAA1 /* SendMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB1CEA82973CD1B0073EAA1 /* SendMessageView.swift */; };
 		FDB1CEB22973CD1B0073EAA1 /* SendMessageItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB1CEA92973CD1B0073EAA1 /* SendMessageItemView.swift */; };
 		FDB1CEB32973CD1B0073EAA1 /* SendMessagesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB1CEAA2973CD1B0073EAA1 /* SendMessagesView.swift */; };
+		FDB1CEB52973CFC10073EAA1 /* ClientToolBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB1CEB42973CFC10073EAA1 /* ClientToolBarView.swift */; };
+		FDB1CEB72973D02E0073EAA1 /* ToolBarItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB1CEB62973D02E0073EAA1 /* ToolBarItemView.swift */; };
+		FDB1CEB92973D4320073EAA1 /* JsonMakerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB1CEB82973D4320073EAA1 /* JsonMakerView.swift */; };
+		FDB1CEBB29743AE90073EAA1 /* FormatMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB1CEBA29743AE90073EAA1 /* FormatMessageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +50,10 @@
 		FDB1CEA82973CD1B0073EAA1 /* SendMessageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendMessageView.swift; sourceTree = "<group>"; };
 		FDB1CEA92973CD1B0073EAA1 /* SendMessageItemView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendMessageItemView.swift; sourceTree = "<group>"; };
 		FDB1CEAA2973CD1B0073EAA1 /* SendMessagesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendMessagesView.swift; sourceTree = "<group>"; };
+		FDB1CEB42973CFC10073EAA1 /* ClientToolBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientToolBarView.swift; sourceTree = "<group>"; };
+		FDB1CEB62973D02E0073EAA1 /* ToolBarItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolBarItemView.swift; sourceTree = "<group>"; };
+		FDB1CEB82973D4320073EAA1 /* JsonMakerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonMakerView.swift; sourceTree = "<group>"; };
+		FDB1CEBA29743AE90073EAA1 /* FormatMessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormatMessageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,6 +170,10 @@
 				FDB1CEA82973CD1B0073EAA1 /* SendMessageView.swift */,
 				FDB1CEA92973CD1B0073EAA1 /* SendMessageItemView.swift */,
 				FDB1CEAA2973CD1B0073EAA1 /* SendMessagesView.swift */,
+				FDB1CEB42973CFC10073EAA1 /* ClientToolBarView.swift */,
+				FDB1CEB62973D02E0073EAA1 /* ToolBarItemView.swift */,
+				FDB1CEB82973D4320073EAA1 /* JsonMakerView.swift */,
+				FDB1CEBA29743AE90073EAA1 /* FormatMessageView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -282,6 +294,9 @@
 			files = (
 				FDB1CEAB2973CD1B0073EAA1 /* MessageModel.swift in Sources */,
 				FDB1CEB22973CD1B0073EAA1 /* SendMessageItemView.swift in Sources */,
+				FDB1CEBB29743AE90073EAA1 /* FormatMessageView.swift in Sources */,
+				FDB1CEB72973D02E0073EAA1 /* ToolBarItemView.swift in Sources */,
+				FDB1CEB92973D4320073EAA1 /* JsonMakerView.swift in Sources */,
 				FDB1CEAD2973CD1B0073EAA1 /* ClientModel.swift in Sources */,
 				FDB1CEAC2973CD1B0073EAA1 /* ClientViewModel.swift in Sources */,
 				FDB1CEAE2973CD1B0073EAA1 /* ReciveMessageItemView.swift in Sources */,
@@ -293,6 +308,7 @@
 				FDB1CE8C2973CC840073EAA1 /* Persistence.swift in Sources */,
 				FDB1CEB02973CD1B0073EAA1 /* RecevieMessagesView.swift in Sources */,
 				FDB1CEAF2973CD1B0073EAA1 /* ClientView.swift in Sources */,
+				FDB1CEB52973CFC10073EAA1 /* ClientToolBarView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

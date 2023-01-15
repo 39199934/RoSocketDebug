@@ -12,10 +12,17 @@ struct RecevieMessagesView: View {
     @Binding var stringEncoding: String.Encoding
     var body: some View {
         VStack(alignment: HorizontalAlignment.leading){
-            Text("接收的消息")
-                .font(.title3)
-                .foregroundColor(.primary)
-                .padding()
+            HStack{
+                Text("接收的消息，共计\(reciveMessage.count)条")
+                    .font(.title3)
+                    .foregroundColor(.primary)
+                    .padding()
+                Button("清除所有记录"){
+                    reciveMessage = []
+                }.padding()
+                Spacer()
+            }
+            .background(Color.gray.opacity(0.5))
             ScrollViewReader{ proxy in
                 ScrollView{
                     ForEach(reciveMessage,id:\.id){item in

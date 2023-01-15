@@ -14,10 +14,19 @@ struct SendMessagesView: View {
         
 //            Text("send messages")
             VStack(alignment: HorizontalAlignment.trailing){
-                Text("发送的消息")
-                    .font(.title3)
-                    .foregroundColor(.primary)
-                    .padding()
+                
+                HStack{
+                    Text("发送的消息，共计\(sendMessage.count)条")
+                        .font(.title3)
+                        .foregroundColor(.primary)
+                        .padding()
+                    Button("清除所有记录"){
+                        sendMessage = []
+                    }.padding()
+                    
+                    Spacer()
+                }
+                .background(Color.green.opacity(0.3))
                 ScrollViewReader{proxy in
                     ScrollView{
                         ForEach(sendMessage,id:\.id){msg in
