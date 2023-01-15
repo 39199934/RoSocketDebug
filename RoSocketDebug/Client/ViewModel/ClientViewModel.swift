@@ -12,6 +12,8 @@ class ClientViewModel: NSObject,ObservableObject,Identifiable{
     @Published var client: GCDAsyncSocket
     @Published var hostIp: String
     @Published var hostPort: String
+    @Published var localIp: String
+    @Published var localPort: String
     @Published var sendStringEncoding: String.Encoding
     @Published var reciveStringEncoding: String.Encoding
     @Published var sendMessage: [MessageModel<String>]
@@ -32,6 +34,8 @@ class ClientViewModel: NSObject,ObservableObject,Identifiable{
         client =  GCDAsyncSocket()
         hostIp = "0.0.0.0"
         hostPort = "5777"
+        localIp = "0.0.0.0"
+        localPort = "0"
         notificatiton = ""
         isConnected = false
         super.init()
@@ -62,6 +66,10 @@ extension ClientViewModel: GCDAsyncSocketDelegate{
     func socket(_ sock: GCDAsyncSocket, didConnectToHost host: String, port: UInt16) {
         client.readData(withTimeout: -1, tag: READTAG)
         isConnected = true
+        self.hostIp = host
+        self.hostPort = String(port)
+        localIp = sock.localHost ?? "0.0.0.0"
+        localPort = String(sock.localPort)
         notificatiton = "已连接上\(host):\(port)"
     }
     func socketDidDisconnect(_ sock: GCDAsyncSocket, withError err: Error?) {

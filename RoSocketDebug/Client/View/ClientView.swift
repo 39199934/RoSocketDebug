@@ -23,17 +23,27 @@ struct ClientView: View {
                     
                     
                 }
-                Text("服务器地址")
-                    .font(.headline)
-                    .foregroundColor(.secondary)
-                TextField("地址", text: $client.hostIp)
-                Text("服务器端口")
-                    .font(.headline)
-                    .foregroundColor(.secondary)
-                TextField("端口", text: $client.hostPort)
+                Group{
+                    Text("本地地址:\(client.localIp)")
+                        .font(.headline)
+                        .foregroundColor(client.isConnected ? .primary : .secondary)
+                    Text("本地端口:\(client.localPort)")
+                        .font(.headline)
+                        .foregroundColor(client.isConnected ? .primary : .secondary)
+                    Divider()
+                    Text("服务器地址")
+                        .font(.headline)
+                        .foregroundColor(.secondary)
+                    TextField("地址", text: $client.hostIp)
+                    Text("服务器端口")
+                        .font(.headline)
+                        .foregroundColor(.secondary)
+                    TextField("端口", text: $client.hostPort)
+                }
+                Divider()
                 Text("接收字符编码：\(client.reciveStringEncoding.description)")
                 Text("发送字符编码：\(client.sendStringEncoding.description)")
-                
+                Divider()
 
                 Button(client.isConnected ? "断开连接":"连接"){
                     client.onClickedLink()
@@ -46,6 +56,7 @@ struct ClientView: View {
 //                }
                 Spacer()
             }.padding()
+                .lineSpacing(10)
             VStack{
                 
                 RecevieMessagesView(reciveMessage: $client.reciveMessage, reciveStringEncoding: $client.reciveStringEncoding)

@@ -27,7 +27,7 @@ struct ClientToolBarView: View {
                 }
                 .sheet(isPresented: $isShowFormatMessage) {
                     FormatMessageView(client: client, isShow:$isShowFormatMessage)
-                        .frame(width: 800,height: 640)
+                        .frame(width: 640,height: 480)
                         .frame( minWidth: 640,minHeight: 480)
                 }
             Spacer()

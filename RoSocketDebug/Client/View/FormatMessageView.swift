@@ -76,7 +76,7 @@ struct FormatMessageView: View {
                     client.send(message: viewString)
                     isShow = false
                 }
-                Button("分段发送发送")
+                Button("添加消息头分段发送")
                 {
                     let msgHead: JSON = [
                         "messageLength": viewString.count,
