@@ -7,15 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B8F0BC7D726A65EE1B5D7ACB /* Pods_RoSocketDebug.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5964F58E82CC89380C86B4DF /* Pods_RoSocketDebug.framework */; };
 		FDB1CE8A2973CC840073EAA1 /* RoSocketDebugApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB1CE892973CC840073EAA1 /* RoSocketDebugApp.swift */; };
 		FDB1CE8C2973CC840073EAA1 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB1CE8B2973CC840073EAA1 /* Persistence.swift */; };
 		FDB1CE8F2973CC840073EAA1 /* RoSocketDebug.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FDB1CE8D2973CC840073EAA1 /* RoSocketDebug.xcdatamodeld */; };
 		FDB1CE912973CC840073EAA1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB1CE902973CC840073EAA1 /* ContentView.swift */; };
 		FDB1CE932973CC870073EAA1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FDB1CE922973CC870073EAA1 /* Assets.xcassets */; };
 		FDB1CE972973CC870073EAA1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FDB1CE962973CC870073EAA1 /* Preview Assets.xcassets */; };
+		FDB1CEAB2973CD1B0073EAA1 /* MessageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB1CE9E2973CD1A0073EAA1 /* MessageModel.swift */; };
+		FDB1CEAC2973CD1B0073EAA1 /* ClientViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB1CEA12973CD1B0073EAA1 /* ClientViewModel.swift */; };
+		FDB1CEAD2973CD1B0073EAA1 /* ClientModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB1CEA32973CD1B0073EAA1 /* ClientModel.swift */; };
+		FDB1CEAE2973CD1B0073EAA1 /* ReciveMessageItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB1CEA52973CD1B0073EAA1 /* ReciveMessageItemView.swift */; };
+		FDB1CEAF2973CD1B0073EAA1 /* ClientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB1CEA62973CD1B0073EAA1 /* ClientView.swift */; };
+		FDB1CEB02973CD1B0073EAA1 /* RecevieMessagesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB1CEA72973CD1B0073EAA1 /* RecevieMessagesView.swift */; };
+		FDB1CEB12973CD1B0073EAA1 /* SendMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB1CEA82973CD1B0073EAA1 /* SendMessageView.swift */; };
+		FDB1CEB22973CD1B0073EAA1 /* SendMessageItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB1CEA92973CD1B0073EAA1 /* SendMessageItemView.swift */; };
+		FDB1CEB32973CD1B0073EAA1 /* SendMessagesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB1CEAA2973CD1B0073EAA1 /* SendMessagesView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		543AAE2B5BD7E2AE3DF8836E /* Pods-RoSocketDebug.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RoSocketDebug.debug.xcconfig"; path = "Target Support Files/Pods-RoSocketDebug/Pods-RoSocketDebug.debug.xcconfig"; sourceTree = "<group>"; };
+		5964F58E82CC89380C86B4DF /* Pods_RoSocketDebug.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RoSocketDebug.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		59E5922413BC27DF1AB6F7E4 /* Pods-RoSocketDebug.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RoSocketDebug.release.xcconfig"; path = "Target Support Files/Pods-RoSocketDebug/Pods-RoSocketDebug.release.xcconfig"; sourceTree = "<group>"; };
 		FDB1CE862973CC840073EAA1 /* RoSocketDebug.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RoSocketDebug.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDB1CE892973CC840073EAA1 /* RoSocketDebugApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoSocketDebugApp.swift; sourceTree = "<group>"; };
 		FDB1CE8B2973CC840073EAA1 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
@@ -24,6 +37,15 @@
 		FDB1CE922973CC870073EAA1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FDB1CE942973CC870073EAA1 /* RoSocketDebug.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = RoSocketDebug.entitlements; sourceTree = "<group>"; };
 		FDB1CE962973CC870073EAA1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		FDB1CE9E2973CD1A0073EAA1 /* MessageModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageModel.swift; sourceTree = "<group>"; };
+		FDB1CEA12973CD1B0073EAA1 /* ClientViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClientViewModel.swift; sourceTree = "<group>"; };
+		FDB1CEA32973CD1B0073EAA1 /* ClientModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClientModel.swift; sourceTree = "<group>"; };
+		FDB1CEA52973CD1B0073EAA1 /* ReciveMessageItemView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReciveMessageItemView.swift; sourceTree = "<group>"; };
+		FDB1CEA62973CD1B0073EAA1 /* ClientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClientView.swift; sourceTree = "<group>"; };
+		FDB1CEA72973CD1B0073EAA1 /* RecevieMessagesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecevieMessagesView.swift; sourceTree = "<group>"; };
+		FDB1CEA82973CD1B0073EAA1 /* SendMessageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendMessageView.swift; sourceTree = "<group>"; };
+		FDB1CEA92973CD1B0073EAA1 /* SendMessageItemView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendMessageItemView.swift; sourceTree = "<group>"; };
+		FDB1CEAA2973CD1B0073EAA1 /* SendMessagesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendMessagesView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +53,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B8F0BC7D726A65EE1B5D7ACB /* Pods_RoSocketDebug.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		47C34C6A15FEA90190347E83 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5964F58E82CC89380C86B4DF /* Pods_RoSocketDebug.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F3B9357387900F3EC7DDE24B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				543AAE2B5BD7E2AE3DF8836E /* Pods-RoSocketDebug.debug.xcconfig */,
+				59E5922413BC27DF1AB6F7E4 /* Pods-RoSocketDebug.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		FDB1CE7D2973CC840073EAA1 = {
 			isa = PBXGroup;
 			children = (
 				FDB1CE882973CC840073EAA1 /* RoSocketDebug */,
 				FDB1CE872973CC840073EAA1 /* Products */,
+				F3B9357387900F3EC7DDE24B /* Pods */,
+				47C34C6A15FEA90190347E83 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,6 +98,8 @@
 		FDB1CE882973CC840073EAA1 /* RoSocketDebug */ = {
 			isa = PBXGroup;
 			children = (
+				FDB1CE9F2973CD1B0073EAA1 /* Client */,
+				FDB1CE9D2973CD1A0073EAA1 /* Message */,
 				FDB1CE892973CC840073EAA1 /* RoSocketDebugApp.swift */,
 				FDB1CE8B2973CC840073EAA1 /* Persistence.swift */,
 				FDB1CE902973CC840073EAA1 /* ContentView.swift */,
@@ -75,6 +119,53 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		FDB1CE9D2973CD1A0073EAA1 /* Message */ = {
+			isa = PBXGroup;
+			children = (
+				FDB1CE9E2973CD1A0073EAA1 /* MessageModel.swift */,
+			);
+			path = Message;
+			sourceTree = "<group>";
+		};
+		FDB1CE9F2973CD1B0073EAA1 /* Client */ = {
+			isa = PBXGroup;
+			children = (
+				FDB1CEA02973CD1B0073EAA1 /* ViewModel */,
+				FDB1CEA22973CD1B0073EAA1 /* Model */,
+				FDB1CEA42973CD1B0073EAA1 /* View */,
+			);
+			path = Client;
+			sourceTree = "<group>";
+		};
+		FDB1CEA02973CD1B0073EAA1 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				FDB1CEA12973CD1B0073EAA1 /* ClientViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		FDB1CEA22973CD1B0073EAA1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FDB1CEA32973CD1B0073EAA1 /* ClientModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FDB1CEA42973CD1B0073EAA1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FDB1CEA52973CD1B0073EAA1 /* ReciveMessageItemView.swift */,
+				FDB1CEA62973CD1B0073EAA1 /* ClientView.swift */,
+				FDB1CEA72973CD1B0073EAA1 /* RecevieMessagesView.swift */,
+				FDB1CEA82973CD1B0073EAA1 /* SendMessageView.swift */,
+				FDB1CEA92973CD1B0073EAA1 /* SendMessageItemView.swift */,
+				FDB1CEAA2973CD1B0073EAA1 /* SendMessagesView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -82,9 +173,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FDB1CE9A2973CC870073EAA1 /* Build configuration list for PBXNativeTarget "RoSocketDebug" */;
 			buildPhases = (
+				672DB781CA785D2A95A4B2DB /* [CP] Check Pods Manifest.lock */,
 				FDB1CE822973CC840073EAA1 /* Sources */,
 				FDB1CE832973CC840073EAA1 /* Frameworks */,
 				FDB1CE842973CC840073EAA1 /* Resources */,
+				6BC92EC70D795E4DE2DFF846 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -140,15 +233,66 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		672DB781CA785D2A95A4B2DB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RoSocketDebug-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6BC92EC70D795E4DE2DFF846 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RoSocketDebug/Pods-RoSocketDebug-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RoSocketDebug/Pods-RoSocketDebug-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RoSocketDebug/Pods-RoSocketDebug-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		FDB1CE822973CC840073EAA1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FDB1CEAB2973CD1B0073EAA1 /* MessageModel.swift in Sources */,
+				FDB1CEB22973CD1B0073EAA1 /* SendMessageItemView.swift in Sources */,
+				FDB1CEAD2973CD1B0073EAA1 /* ClientModel.swift in Sources */,
+				FDB1CEAC2973CD1B0073EAA1 /* ClientViewModel.swift in Sources */,
+				FDB1CEAE2973CD1B0073EAA1 /* ReciveMessageItemView.swift in Sources */,
 				FDB1CE8A2973CC840073EAA1 /* RoSocketDebugApp.swift in Sources */,
 				FDB1CE8F2973CC840073EAA1 /* RoSocketDebug.xcdatamodeld in Sources */,
+				FDB1CEB12973CD1B0073EAA1 /* SendMessageView.swift in Sources */,
+				FDB1CEB32973CD1B0073EAA1 /* SendMessagesView.swift in Sources */,
 				FDB1CE912973CC840073EAA1 /* ContentView.swift in Sources */,
 				FDB1CE8C2973CC840073EAA1 /* Persistence.swift in Sources */,
+				FDB1CEB02973CD1B0073EAA1 /* RecevieMessagesView.swift in Sources */,
+				FDB1CEAF2973CD1B0073EAA1 /* ClientView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -266,6 +410,7 @@
 		};
 		FDB1CE9B2973CC870073EAA1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 543AAE2B5BD7E2AE3DF8836E /* Pods-RoSocketDebug.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -277,6 +422,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSNetworkVolumesUsageDescription = "$(MARKETING_VERSION)";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -304,6 +450,7 @@
 		};
 		FDB1CE9C2973CC870073EAA1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 59E5922413BC27DF1AB6F7E4 /* Pods-RoSocketDebug.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -315,6 +462,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSNetworkVolumesUsageDescription = "$(MARKETING_VERSION)";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
