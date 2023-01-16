@@ -21,6 +21,7 @@ class ClientViewModel: NSObject,ObservableObject,Identifiable{
     @Published var id: UUID
     @Published var notificatiton: String
     @Published var isConnected: Bool
+    @Published  var clientDescription: String
     let READTAG = 0x99
     var sendMessageDraft: [MessageModel<String>]
     
@@ -37,6 +38,7 @@ class ClientViewModel: NSObject,ObservableObject,Identifiable{
         localIp = "0.0.0.0"
         localPort = "0"
         notificatiton = ""
+        clientDescription = "新的客户端"
         isConnected = false
         super.init()
         let socket = GCDAsyncSocket(socketQueue: DispatchQueue.init(label: id.uuidString))
@@ -45,6 +47,11 @@ class ClientViewModel: NSObject,ObservableObject,Identifiable{
         client = socket
         client.readData(withTimeout: -1, tag: READTAG)
         
+    }
+//    infix operator  == : AdditionPrecedence
+    static func == (lhs: ClientViewModel,rhs: ClientViewModel) -> Bool{
+        
+        return lhs.id == rhs.id
     }
 }
 
@@ -71,6 +78,7 @@ extension ClientViewModel: GCDAsyncSocketDelegate{
         localIp = sock.localHost ?? "0.0.0.0"
         localPort = String(sock.localPort)
         notificatiton = "已连接上\(host):\(port)"
+        clientDescription = "\(hostIp):\(hostPort)"
     }
     func socketDidDisconnect(_ sock: GCDAsyncSocket, withError err: Error?) {
         isConnected = false
@@ -105,6 +113,7 @@ extension ClientViewModel{
             
         }
     }
+    
 }
 
 extension UUID{

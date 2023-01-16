@@ -11,11 +11,13 @@ import SwiftUI
 struct RoSocketDebugApp: App {
     let persistenceController = PersistenceController.shared
     let clientViewModel = ClientViewModel()
+    let clientsViewModel = ClientsViewModel()
 
     var body: some Scene {
         WindowGroup {
 //            ContentView()
-            ClientView(client: clientViewModel)
+//            ClientView(client: clientViewModel)
+             ClientsView(clientsViewModel: clientsViewModel)
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }
