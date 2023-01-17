@@ -30,6 +30,13 @@
 		FDB1CEBE297597E80073EAA1 /* ClientsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB1CEBD297597E80073EAA1 /* ClientsViewModel.swift */; };
 		FDB1CEC12975A2A60073EAA1 /* ClientsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB1CEC02975A2A60073EAA1 /* ClientsView.swift */; };
 		FDB1CEC32975A6A80073EAA1 /* ClientsListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB1CEC22975A6A80073EAA1 /* ClientsListItemView.swift */; };
+		FDB1CEC62975B1DE0073EAA1 /* ServerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB1CEC52975B1DE0073EAA1 /* ServerViewModel.swift */; };
+		FDB1CEC82975B5BE0073EAA1 /* ServerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB1CEC72975B5BE0073EAA1 /* ServerView.swift */; };
+		FDB1CECB29768DA50073EAA1 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB1CECA29768DA50073EAA1 /* MainView.swift */; };
+		FDB1CECE297692190073EAA1 /* ServersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB1CECD297692190073EAA1 /* ServersViewModel.swift */; };
+		FDB1CED02976935F0073EAA1 /* ServersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB1CECF2976935F0073EAA1 /* ServersView.swift */; };
+		FDB1CED22976945F0073EAA1 /* AppendNewServerSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB1CED12976945F0073EAA1 /* AppendNewServerSetting.swift */; };
+		FDB1CED4297697750073EAA1 /* ServersListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB1CED3297697750073EAA1 /* ServersListItemView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +67,13 @@
 		FDB1CEBD297597E80073EAA1 /* ClientsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientsViewModel.swift; sourceTree = "<group>"; };
 		FDB1CEC02975A2A60073EAA1 /* ClientsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientsView.swift; sourceTree = "<group>"; };
 		FDB1CEC22975A6A80073EAA1 /* ClientsListItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientsListItemView.swift; sourceTree = "<group>"; };
+		FDB1CEC52975B1DE0073EAA1 /* ServerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerViewModel.swift; sourceTree = "<group>"; };
+		FDB1CEC72975B5BE0073EAA1 /* ServerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerView.swift; sourceTree = "<group>"; };
+		FDB1CECA29768DA50073EAA1 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		FDB1CECD297692190073EAA1 /* ServersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServersViewModel.swift; sourceTree = "<group>"; };
+		FDB1CECF2976935F0073EAA1 /* ServersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServersView.swift; sourceTree = "<group>"; };
+		FDB1CED12976945F0073EAA1 /* AppendNewServerSetting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppendNewServerSetting.swift; sourceTree = "<group>"; };
+		FDB1CED3297697750073EAA1 /* ServersListItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServersListItemView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +126,9 @@
 		FDB1CE882973CC840073EAA1 /* RoSocketDebug */ = {
 			isa = PBXGroup;
 			children = (
+				FDB1CECC297691FC0073EAA1 /* Servers */,
+				FDB1CEC929768D8C0073EAA1 /* Main */,
+				FDB1CEC42975B1AA0073EAA1 /* Server */,
 				FDB1CEBC297597CD0073EAA1 /* Clients */,
 				FDB1CE9F2973CD1B0073EAA1 /* Client */,
 				FDB1CE9D2973CD1A0073EAA1 /* Message */,
@@ -201,6 +218,34 @@
 				FDB1CEC22975A6A80073EAA1 /* ClientsListItemView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		FDB1CEC42975B1AA0073EAA1 /* Server */ = {
+			isa = PBXGroup;
+			children = (
+				FDB1CEC52975B1DE0073EAA1 /* ServerViewModel.swift */,
+				FDB1CEC72975B5BE0073EAA1 /* ServerView.swift */,
+			);
+			path = Server;
+			sourceTree = "<group>";
+		};
+		FDB1CEC929768D8C0073EAA1 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				FDB1CECA29768DA50073EAA1 /* MainView.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		FDB1CECC297691FC0073EAA1 /* Servers */ = {
+			isa = PBXGroup;
+			children = (
+				FDB1CECD297692190073EAA1 /* ServersViewModel.swift */,
+				FDB1CECF2976935F0073EAA1 /* ServersView.swift */,
+				FDB1CED12976945F0073EAA1 /* AppendNewServerSetting.swift */,
+				FDB1CED3297697750073EAA1 /* ServersListItemView.swift */,
+			);
+			path = Servers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -319,10 +364,12 @@
 			files = (
 				FDB1CEAB2973CD1B0073EAA1 /* MessageModel.swift in Sources */,
 				FDB1CEB22973CD1B0073EAA1 /* SendMessageItemView.swift in Sources */,
+				FDB1CEC62975B1DE0073EAA1 /* ServerViewModel.swift in Sources */,
 				FDB1CEBB29743AE90073EAA1 /* FormatMessageView.swift in Sources */,
 				FDB1CEB72973D02E0073EAA1 /* ToolBarItemView.swift in Sources */,
 				FDB1CEB92973D4320073EAA1 /* JsonMakerView.swift in Sources */,
 				FDB1CEAD2973CD1B0073EAA1 /* ClientModel.swift in Sources */,
+				FDB1CED02976935F0073EAA1 /* ServersView.swift in Sources */,
 				FDB1CEAC2973CD1B0073EAA1 /* ClientViewModel.swift in Sources */,
 				FDB1CEAE2973CD1B0073EAA1 /* ReciveMessageItemView.swift in Sources */,
 				FDB1CE8A2973CC840073EAA1 /* RoSocketDebugApp.swift in Sources */,
@@ -331,9 +378,14 @@
 				FDB1CEC12975A2A60073EAA1 /* ClientsView.swift in Sources */,
 				FDB1CEB32973CD1B0073EAA1 /* SendMessagesView.swift in Sources */,
 				FDB1CE912973CC840073EAA1 /* ContentView.swift in Sources */,
+				FDB1CECE297692190073EAA1 /* ServersViewModel.swift in Sources */,
+				FDB1CEC82975B5BE0073EAA1 /* ServerView.swift in Sources */,
+				FDB1CED4297697750073EAA1 /* ServersListItemView.swift in Sources */,
+				FDB1CED22976945F0073EAA1 /* AppendNewServerSetting.swift in Sources */,
 				FDB1CE8C2973CC840073EAA1 /* Persistence.swift in Sources */,
 				FDB1CEB02973CD1B0073EAA1 /* RecevieMessagesView.swift in Sources */,
 				FDB1CEC32975A6A80073EAA1 /* ClientsListItemView.swift in Sources */,
+				FDB1CECB29768DA50073EAA1 /* MainView.swift in Sources */,
 				FDB1CEAF2973CD1B0073EAA1 /* ClientView.swift in Sources */,
 				FDB1CEB52973CFC10073EAA1 /* ClientToolBarView.swift in Sources */,
 				FDB1CEBE297597E80073EAA1 /* ClientsViewModel.swift in Sources */,
@@ -458,6 +510,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_ENTITLEMENTS = RoSocketDebug/RoSocketDebug.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -466,6 +519,8 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "socket调试工作";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
 				INFOPLIST_KEY_NSNetworkVolumesUsageDescription = "$(MARKETING_VERSION)";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
@@ -498,6 +553,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_ENTITLEMENTS = RoSocketDebug/RoSocketDebug.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -506,6 +562,8 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "socket调试工作";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
 				INFOPLIST_KEY_NSNetworkVolumesUsageDescription = "$(MARKETING_VERSION)";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;

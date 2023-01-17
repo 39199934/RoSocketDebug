@@ -23,6 +23,7 @@ struct SendMessagesView: View {
                     Picker("字符编码", selection: $sendStringEncoding) {
                         Group{
                             Text("\(String.Encoding.utf8.description)").tag(String.Encoding.utf8)
+                        
                             Text("\(String.Encoding.ascii.description)").tag(String.Encoding.ascii)
                             Text("\(String.Encoding.utf16.description)").tag(String.Encoding.utf16)
                             Text("\(String.Encoding.utf16BigEndian.description)").tag(String.Encoding.utf16BigEndian)

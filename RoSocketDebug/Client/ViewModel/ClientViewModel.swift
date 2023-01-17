@@ -10,8 +10,8 @@ import CocoaAsyncSocket
 
 class ClientViewModel: NSObject,ObservableObject,Identifiable{
     @Published var client: GCDAsyncSocket
-    @Published var hostIp: String
-    @Published var hostPort: String
+    @Published var connectIp: String
+    @Published var connectPort: String
     @Published var localIp: String
     @Published var localPort: String
     @Published var sendStringEncoding: String.Encoding
@@ -22,6 +22,8 @@ class ClientViewModel: NSObject,ObservableObject,Identifiable{
     @Published var notificatiton: String
     @Published var isConnected: Bool
     @Published  var clientDescription: String
+    @Published  var localDescription: String
+    @Published  var connectDescription: String
     let READTAG = 0x99
     var sendMessageDraft: [MessageModel<String>]
     
@@ -33,12 +35,14 @@ class ClientViewModel: NSObject,ObservableObject,Identifiable{
         reciveMessage = []
         sendMessageDraft = []
         client =  GCDAsyncSocket()
-        hostIp = "0.0.0.0"
-        hostPort = "5777"
+        connectIp = "0.0.0.0"
+        connectPort = "5777"
         localIp = "0.0.0.0"
         localPort = "0"
         notificatiton = ""
         clientDescription = "新的客户端"
+        localDescription = "新的客户端"
+        connectDescription = "新的客户端"
         isConnected = false
         super.init()
         let socket = GCDAsyncSocket(socketQueue: DispatchQueue.init(label: id.uuidString))
@@ -47,6 +51,36 @@ class ClientViewModel: NSObject,ObservableObject,Identifiable{
         client = socket
         client.readData(withTimeout: -1, tag: READTAG)
         
+    }
+    convenience init(socket: GCDAsyncSocket){
+        self.init()
+        localIp = socket.localHost ?? "0.0.0.0"
+        localPort = String(socket.localPort)
+        connectIp = socket.connectedHost ?? "0.0.0.0"
+        
+        connectPort = String(socket.connectedPort)
+    
+        localDescription = "\(localIp):\(localPort)"
+        connectDescription = "\(connectIp):\(connectPort)"
+        
+        
+        notificatiton = ""
+        clientDescription = "\(connectIp):\(connectPort)"
+        
+        localIp = socket.localHost ?? "0.0.0.0"
+        localPort = String(socket.localPort)
+        connectIp = socket.connectedHost ?? "0.0.0.0"
+        
+        connectPort = String(socket.connectedPort)
+    
+        localDescription = "\(localIp):\(localPort)"
+        connectDescription = "\(connectIp):\(connectPort)"
+        
+        
+        socket.delegateQueue = DispatchQueue.main
+        socket.delegate = self
+        client = socket
+        client.readData(withTimeout: -1, tag: READTAG)
     }
 //    infix operator  == : AdditionPrecedence
     static func == (lhs: ClientViewModel,rhs: ClientViewModel) -> Bool{
@@ -73,12 +107,23 @@ extension ClientViewModel: GCDAsyncSocketDelegate{
     func socket(_ sock: GCDAsyncSocket, didConnectToHost host: String, port: UInt16) {
         client.readData(withTimeout: -1, tag: READTAG)
         isConnected = true
-        self.hostIp = host
-        self.hostPort = String(port)
+        self.connectIp = host
+        self.connectPort = String(port)
         localIp = sock.localHost ?? "0.0.0.0"
         localPort = String(sock.localPort)
         notificatiton = "已连接上\(host):\(port)"
-        clientDescription = "\(hostIp):\(hostPort)"
+        clientDescription = "\(connectIp):\(connectPort)"
+        localIp = sock.localHost ?? "0.0.0.0"
+        localPort = String(sock.localPort)
+        connectIp = sock.connectedHost ?? "0.0.0.0"
+        
+        connectPort = String(sock.connectedPort)
+    
+        localDescription = "\(localIp):\(localPort)"
+        connectDescription = "\(host):\(port)"
+        
+        
+        
     }
     func socketDidDisconnect(_ sock: GCDAsyncSocket, withError err: Error?) {
         isConnected = false
@@ -103,9 +148,9 @@ extension ClientViewModel{
         if client.isConnected{
             client.disconnect()
         }else{
-            if let port = UInt16(hostPort){
+            if let port = UInt16(connectPort){
                 do{
-                    try client.connect(toHost: hostIp, onPort: port)
+                    try client.connect(toHost: connectIp, onPort: port)
                 }catch{
                     notificatiton = error.localizedDescription
                 }

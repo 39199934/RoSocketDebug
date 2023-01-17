@@ -1,32 +1,35 @@
 //
-//  ClientsListItemView.swift
+//  ServersListItemView.swift
 //  RoSocketDebug
 //
-//  Created by rolodestar on 2023/1/16.
+//  Created by rolodestar on 2023/1/17.
 //
 
 import SwiftUI
 
-struct ClientsListItemView: View {
-    @ObservedObject var clientViewModel: ClientViewModel
-    @Binding var selectedClientViewModel: ClientViewModel?
+
+
+
+struct ServersListItemView: View {
+    @ObservedObject var serverViewModel: ServerViewModel
+    @Binding var selectedServerViewModel: ServerViewModel?
     var isForClientView:Bool = true
     var body: some View {
         HStack{
-            Image(systemName: clientViewModel.isConnected ? "waveform":"waveform.slash")
+            Image(systemName: serverViewModel.clients.count > 0 ? "waveform":"waveform.slash")
                 .resizable()
                 .frame(width: 16,height: 16)
-                .foregroundColor(clientViewModel.isConnected ? Color.green:Color.red)
+                .foregroundColor(serverViewModel.clients.count > 0 ? Color.green:Color.red)
 //            Text(isForClientView ? clientViewModel.connectDescription  : clientViewModel.localDescription)
-            Text(clientViewModel.connectDescription )
+            Text(serverViewModel.serverDescription )
                 .font(.title3)
-                .foregroundColor(clientViewModel.isConnected ? .primary : .secondary)
+                .foregroundColor(serverViewModel.clients.count > 0 ? .primary : .secondary)
             
         }.padding(7)
             .overlay(alignment: .center, content: {
                 
-                    if(selectedClientViewModel != nil){
-                        if(clientViewModel == selectedClientViewModel!){
+                    if(selectedServerViewModel != nil){
+                        if(serverViewModel == selectedServerViewModel!){
                             withAnimation{
                             RoundedRectangle(cornerRadius: 6,style: .continuous)
                                 .strokeBorder(.gray, lineWidth: 1)
@@ -41,9 +44,9 @@ struct ClientsListItemView: View {
     }
 }
 
-struct ClientsListItemView_Previews: PreviewProvider {
+struct ServersListItemView_Previews: PreviewProvider {
     static var client = ClientViewModel()
     static var previews: some View {
-        ClientsListItemView(clientViewModel: ClientsListItemView_Previews.client, selectedClientViewModel: .constant(ClientsListItemView_Previews.client))
+        ServersListItemView(serverViewModel: ServerViewModel(), selectedServerViewModel: .constant(ServerViewModel()))
     }
 }
